@@ -1,0 +1,5 @@
+MG=`ls ../../*madgraph*`
+MCatNLO=`ls ../../*MCatNLO*`
+
+hadd -f MG.root $MG
+hadd -f MCatNLO.root $MCatNLO
