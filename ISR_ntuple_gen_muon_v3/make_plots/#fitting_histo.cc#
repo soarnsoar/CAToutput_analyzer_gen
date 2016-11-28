@@ -1,0 +1,11 @@
+#include <iostream>
+
+
+
+void fitting_histo(float xmin, float xmax, TH1D *hh){
+  //  TH1F *hh = TFile::Open("MG.root")->Get("dipt");
+  //  hh->Draw();
+  TF1 *g1 = new TF1("g1","[0]*x*exp(-0.5*((x-[1]",xmin,xmax);
+  hh->Fit(g1,"R");
+  
+}
